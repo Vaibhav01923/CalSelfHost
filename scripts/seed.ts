@@ -1,19 +1,19 @@
 import { uuid } from "short-uuid";
 import type z from "zod";
 
-import dailyMeta from "@calcom/app-store/dailyvideo/_metadata";
-import googleMeetMeta from "@calcom/app-store/googlevideo/_metadata";
-import zoomMeta from "@calcom/app-store/zoomvideo/_metadata";
 import dayjs from "@calcom/dayjs";
-import { getOrgFullOrigin } from "@calcom/ee/organizations/lib/orgDomains";
-import { hashPassword } from "@calcom/lib/auth/hashPassword";
-import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calcom/lib/availability";
-import { prisma } from "@calcom/prisma";
-import type { Membership, Team, User, UserPermissionRole } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
-import { BookingStatus, MembershipRole, RedirectType, SchedulingType } from "@calcom/prisma/enums";
 import type { Ensure } from "@calcom/types/utils";
 
+import dailyMeta from "../packages/app-store/dailyvideo/_metadata";
+import googleMeetMeta from "../packages/app-store/googlevideo/_metadata";
+import zoomMeta from "../packages/app-store/zoomvideo/_metadata";
+import { getOrgFullOrigin } from "../packages/features/ee/organizations/lib/orgDomains";
+import { hashPassword } from "../packages/lib/auth/hashPassword";
+import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "../packages/lib/availability";
+import { prisma } from "../packages/prisma";
+import type { Membership, Team, User, UserPermissionRole } from "../packages/prisma/client";
+import { Prisma } from "../packages/prisma/client";
+import { BookingStatus, MembershipRole, RedirectType, SchedulingType } from "../packages/prisma/enums";
 import type { teamMetadataSchema } from "../packages/prisma/zod-utils";
 import mainAppStore from "./seed-app-store";
 import mainHugeEventTypesSeed from "./seed-huge-event-types";
