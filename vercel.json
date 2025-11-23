@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd ../.. && yarn workspace @calcom/web build",
+  "installCommand": "yarn install",
+  "framework": "nextjs"
+}
