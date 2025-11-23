@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd ../.. && yarn workspace @calcom/web build",
+  "buildCommand": "turbo run build --filter=@calcom/web...",
   "installCommand": "yarn install",
   "framework": "nextjs"
 }
